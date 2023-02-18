@@ -1,2 +1,8 @@
 Pinia vs Vuex:
 ** No necesitas declarar modulos en un estado global, ni se requiere de espacios de nombres (name-spaced). La importación es explicita y el comportamiento modular es implicito.
+** No existen mutaciones explicitas.
+** Soporte completo a TypeScript.
+** No más strings para llamar funciones.
+** Todos los stores son dínamicos (asíncronos desde el inicio, consumo inmediato).
+** Todos los stores son módulos (importación directa, y complementación directa con Vainilla JS).
+** No más necesidad de espacios de nombres.
