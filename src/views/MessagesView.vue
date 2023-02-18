@@ -74,6 +74,11 @@ scrollToBottom()
       />
       <span ref="end"></span>
     </div>
+    <!--
+      Recordar que @submit.prevent es para
+      que se envie el formulario
+      sin recargar la pagina.
+     -->
     <form class="footer" @submit.prevent="addMessage">
       <textarea rows="3" v-model="message"></textarea>
       <button>

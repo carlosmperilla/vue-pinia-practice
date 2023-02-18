@@ -17,15 +17,25 @@ export default defineStore('messages', {
     ]
   }),
   getters: {
+    // Filtrado de mensajes por canal.
     findMessagesByChannelId: (state) => (channelId) => {
       return state.messages.filter((message) => message.channelId === channelId)
     },
+    // Conteo de mensajes por canal, no leídos.
     countUnreadMessagesByChannelId: (state) => (channelId) => {
       return state.findMessagesByChannelId(channelId).filter((message) => message.read === false).length
     }
   },
+  // En pinia se pueden definir actions.
+  // Pero no mutations, las mutaciones son implicitas,
+  // ya sea en los cambios de variables reactivas,
+  // como dentro de una action.
   actions: {
+    // Añade mensajes.
     addMessage(channelId, message) {
+      // Notesé el uso de this, para poder acceder a los
+      // mensajes desde el store propio del modulo,
+      // dentro de una función que cumple como action.
       this.messages.push({
         id: Math.random(),
         author: 1,

@@ -1,0 +1,2 @@
+Pinia vs Vuex:
+** No necesitas declarar modulos en un estado global, ni se requiere de espacios de nombres (name-spaced). La importación es explicita y el comportamiento modular es implicito.

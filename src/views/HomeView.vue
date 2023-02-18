@@ -4,9 +4,12 @@ import InputSearch from '@/components/InputSearch.vue'
 import ProfileCard from '@/components/ProfileCard.vue'
 import ChatItem from '@/components/ChatItem.vue'
 import { ref } from 'vue'
+// La convención es use[Nombredelmodulo]Store
+// para importar modulos de almacenamiento de datos.
 import useProfileStore from '@/stores/profile.js'
 import useChannelsStore from '@/stores/channels.js'
 
+// Usamos los almacenamientos de perfil y canales.
 const profileStore = useProfileStore()
 const channelsStore = useChannelsStore()
 

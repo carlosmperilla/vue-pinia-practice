@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia'
+// Notesé que podemos usar el store de mensajes,
+// importandolo con facilidad.
 import useMessagesStore from './messages.js'
 
 export default defineStore('channels', {
@@ -14,6 +16,7 @@ export default defineStore('channels', {
   }),
   getters: {
     getChannels: (state) => (search) => {
+      // Usamos los mensajes para mostrar los no leídos.
       const messagesStore = useMessagesStore()
       return state.channels
         .filter((channel) => channel.name
